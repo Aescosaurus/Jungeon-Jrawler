@@ -1,0 +1,15 @@
+Phrases to Say:
+	> Welcome!  In this game you must press certain
+		arrow keys to defeat enemies!  Press down arrow to start!
+	> A menacing skeleton
+	> A ravenous zombie
+	> A hungry orc
+	> A corrupted knight
+	> Nice shot!
+	> Yea!  Beat 'em up!
+	> Enemy eliminated.
+	> Whew!  Glad I'm not them.
+	> approaches from the left!
+	> is right in front of you!
+	> attacks from the right!
+	> surprise attacks from behind!
