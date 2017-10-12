@@ -23,6 +23,10 @@ var ajax = new AJAX();
 
 var pl = new Player();
 
+// Other Assets:
+const startSound = new Audio( "sounds/intro.wav" );
+const introImage = new Image();
+
 window.onload = function()
 {
 	const FPS = 30;
@@ -53,7 +57,8 @@ function Init()
 	// }
 	
 	// \/ Initialize things! \/
-	
+	pl.Init();
+	introImage.src = "images/intro.png";
 	// /\ Initialize!        /\
 	
 	console.log( "JSJ Framework " + version + " has loaded successfully!" );
@@ -65,6 +70,8 @@ function Update()
 	if( !started )
 	{
 		console.log( "Welcome!  In this game you must press certain arrow keys to defeat enemies!  Press down arrow to start!" );
+		gfx.context.drawImage( introImage,0,0 );
+		
 		if( kbd.KeyDown( 40 ) )
 		{
 			started = true;

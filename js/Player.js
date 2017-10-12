@@ -111,6 +111,9 @@ class Player
 			// Play current narrator death sound and move to next narrator.
 			gfx.Rect( 0,0,gfx.SCREEN_WIDTH,gfx.SCREEN_HEIGHT,"#F31" );
 			console.log( "BLARGHG!" );
+			ouch.currentTime = 0;
+			ouch.play();
+			setTimeout( function() { location.reload(); },ouch.duration * 1000 );
 			++narrator;
 			enemySpawned = false;
 		}
@@ -169,7 +172,13 @@ class Player
 		var niceShot = new Audio( "sounds/niceShot.wav" );
 		var yeaBeatEmUp = new Audio( "sounds/yeaBeatEmUp.wav" );
 		
+		var ouch = new Audio( "sounds/augh.wav" );
 		// 
+		this.Init = function()
+		{
+			ouch.volume = 0.5;
+		}
+		
 		this.Update = function()
 		{
 			if( !enemySpawned )
