@@ -1,6 +1,8 @@
 Phrases to Say:
-	> Welcome!  In this game you must press certain
-		arrow keys to defeat enemies!  Press down arrow to start!
+	> Welcome!  In this game you must press keys in
+		the direction enemies are attacking from
+		to defeat them!  Press the down arrow
+		to begin!
 	> A menacing skeleton
 	> A ravenous zombie
 	> A hungry orc

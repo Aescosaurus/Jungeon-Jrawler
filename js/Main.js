@@ -59,6 +59,7 @@ function Init()
 	// \/ Initialize things! \/
 	pl.Init();
 	introImage.src = "images/intro.png";
+	startSound.play();
 	// /\ Initialize!        /\
 	
 	console.log( "JSJ Framework " + version + " has loaded successfully!" );
@@ -69,10 +70,10 @@ function Update()
 	// \/ Update things here. \/
 	if( !started )
 	{
-		console.log( "Welcome!  In this game you must press certain arrow keys to defeat enemies!  Press down arrow to start!" );
+		// console.log( "Welcome!  In this game you must press certain arrow keys to defeat enemies!  Press down arrow to start!" );
 		gfx.context.drawImage( introImage,0,0 );
 		
-		if( kbd.KeyDown( 40 ) )
+		if( kbd.KeyDown( 40 ) && startSound.currentTime >= startSound.duration )
 		{
 			started = true;
 		}
@@ -80,6 +81,11 @@ function Update()
 	else
 	{
 		pl.Update();
+		if( pl.IsLost() )
+		{
+			pl = 2;
+			pl = new Player();
+		}
 	}
 	// /\                     /\
 }
