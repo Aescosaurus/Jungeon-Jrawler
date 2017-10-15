@@ -251,7 +251,7 @@ class Player
 					newWinningKeypress = PlayEnemyApproachingSound( winningKeypress,curEnemy );
 				}
 				
-				gfx.Rect( 0,0,gfx.SCREEN_WIDTH,gfx.SCREEN_HEIGHT,"#000" );
+				gfx.Rect( 0,0,gfx.SCREEN_WIDTH,gfx.SCREEN_HEIGHT,"#FFF" );
 				gfx.context.drawImage( enemies[curEnemy],0,0 );
 				
 				if( kbd.KeyDown( newWinningKeypress ) )
@@ -260,7 +260,7 @@ class Player
 					PlayRandomEnemyDeathSound();
 					// Play enemy death sound.
 					// Narrator comments on enemies' death.
-					gfx.Rect( 0,0,gfx.SCREEN_WIDTH,gfx.SCREEN_HEIGHT,"#000" );
+					gfx.Rect( 0,0,gfx.SCREEN_WIDTH,gfx.SCREEN_HEIGHT,"#FFF" );
 					gfx.context.drawImage( deadEnemies[curEnemy],0,0 );
 				}
 				else if( kbd.KeyDown( 37 ) || kbd.KeyDown( 38 ) || kbd.KeyDown( 39 ) || kbd.KeyDown( 40 ) )
