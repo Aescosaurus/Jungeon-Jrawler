@@ -156,10 +156,6 @@ class Player
 			new Image(),
 			new Image()
 		];
-		enemies[0].src = "images/skeleton.png";
-		enemies[1].src = "images/zombie.png";
-		enemies[2].src = "images/orc.png";
-		enemies[3].src = "images/knight.png";
 		
 		var deadEnemies =
 		[
@@ -218,6 +214,11 @@ class Player
 		this.Init = function()
 		{
 			ouch.volume = 0.5;
+			
+			enemies[0].src = "images/skeleton.png";
+			enemies[1].src = "images/zombie.png";
+			enemies[2].src = "images/orc.png";
+			enemies[3].src = "images/knight.png";
 		}
 		
 		this.Update = function()
